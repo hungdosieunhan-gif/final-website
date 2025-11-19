@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Animated Timeline</title>
+<style>
+  body {
+    font-family: sans-serif;
+    background: #f2f4f8;
+    padding: 40px;
+  }
+
+  .timeline {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .rail {
+    height: 8px;
+    width: 90%;
+    margin: auto;
+    background: linear-gradient(90deg,#0066ff,#00cc66,#ff3333,#ffcc00);
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+
+  .stations {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+  }
+
+  .station {
+    width: 120px;
+    text-align: center;
+  }
+
+  .icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.25s ease;
+  }
+
+  .icon-wrapper:hover {
+    transform: scale(1.2);
+  }
+
+  /* ANIMATION EFFECTS FOR EACH ICON */
+
+  /* 1 - Envelope bounce */
+  .icon-1:hover img {
+    animation: bounce 0.6s infinite;
+  }
+  @keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  /* 2 - Money shake */
+  .icon-2:hover img {
+    animation: shake 0.5s infinite;
+  }
+  @keyframes shake {
+    0%,100% { transform: rotate(0); }
+    25% { transform: rotate(8deg); }
+    75% { transform: rotate(-8deg); }
+  }
+
+  /* 3 - Handshake pulse */
+  .icon-3:hover img {
+    animation: pulse 0.6s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+
+  /* 4 - Brush painting motion */
+  .icon-4:hover img {
+    animation: paint 0.6s infinite;
+  }
+  @keyframes paint {
+    0% { transform: rotate(0); }
+    50% { transform: rotate(-20deg) translateX(-4px); }
+    100% { transform: rotate(0); }
+  }
+
+  /* 5 - Person stamping */
+  .icon-5:hover img {
+    animation: stamp 0.5s infinite;
+  }
+  @keyframes stamp {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* 6 - Tube rolling */
+  .icon-6:hover img {
+    animation: roll 0.6s infinite linear;
+  }
+  @keyframes roll {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* 7 - Paper stack ripple */
+  .icon-7:hover img {
+    animation: ripple 0.7s infinite;
+  }
+  @keyframes ripple {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  /* 8 - Scissors cutting */
+  .icon-8:hover img {
+    animation: cut 0.6s infinite;
+  }
+  @keyframes cut {
+    0% { transform: rotate(0); }
+    50% { transform: rotate(20deg); }
+    100% { transform: rotate(0); }
+  }
+
+  /* 9 - Box pop */
+  .icon-9:hover img {
+    animation: pop 0.6s infinite;
+  }
+  @keyframes pop {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+
+  /* 10 - Truck driving */
+  .icon-10:hover img {
+    animation: drive 0.7s infinite;
+  }
+  @keyframes drive {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="timeline">
+  <div class="rail"></div>
+
+  <div class="stations">
+    <div class="station">
+      <div class="icon-wrapper icon-1" style="background:#0066ff;"><img src="icon1.png" width="38"/></div>
+      <p>Tiếp Nhận Đơn</p>
+    </div>
+
+    <div class="station">
+      <div class="icon-wrapper icon-2" style="background:#ffcc00;"><img src="icon2.png" width="38"/></div>
+      <p>Kế Toán Báo Giá</p>
+    </div>
+
+    <div class="station">
+      <div class="icon-wrapper icon-3" style="background:#00cc66;"><img src="icon3.png" width="38"/></div>
+      <p>Khách Duyệt Giá</p>
+    </div>
+
+    <div class="station">
+      <div class="icon-wrapper icon-4" style="background:#ff4444;"><img src="icon4.png" width="38"/></div>
+      <p>Thiết Kế File</p>
+    </div>
+
+    <div class="station">
+      <div class="icon-wrapper icon-5" style="background:#0044cc;"><img src="icon5.png" width="38"/></div>
+      <p>Chế Bản - Trục In</p>
+    </div>
+
+    <div class="station">
+      <div class="icon-wrapper icon-6" style="background:#ffbb00;"><img src="icon6.png" width="38"/></div>
+      <p>In Ống Đồng</p>
+    </div>
+
+    <div class="station">
+      <div class="icon-wrapper icon-7" style="background:#00cc66;"><img src="icon7.png" width="38"/></div>
+      <p>Cán Màng - Ghép</p>
+    </div>
+
+    <div class="station">
+      <div class="icon-wrapper icon-8" style="background:#ff3333;"><img src="icon8.png" width="38"/></div>
+      <p>Cắt - Chia Cuộn</p>
+    </div>
+
+    <div class="station">
+      <div class="icon-wrapper icon-9" style="background:#0044cc;"><img src="icon9.png" width="38"/></div>
+      <p>Đóng Gói</p>
+    </div>
+
+    <div class="station">
+      <div class="icon-wrapper icon-10" style="background:#ffbb00;"><img src="icon10.png" width="38"/></div>
+      <p>Giao Hàng</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
