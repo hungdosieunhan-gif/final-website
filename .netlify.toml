@@ -1,0 +1,21 @@
+# Netlify Configuration File
+# This file configures how Netlify builds and deploys your site
+
+[build]
+  # No build command needed for static HTML site
+  publish = "."
+
+[build.environment]
+  # Disable submodule checkout to avoid errors
+  NETLIFY_SUBMODULE_DISABLED = "true"
+
+# Ignore submodules during build
+[build.processing]
+  skip_processing = false
+
+# Redirect rules (optional)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+

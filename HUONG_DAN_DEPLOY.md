@@ -32,7 +32,7 @@ Bạn cần có **hosting** để chạy website. Có 2 lựa chọn:
 #### Option B: Hosting Miễn Phí (Cho Test)
 
 **Netlify (Khuyến nghị):**
-1. Truy cập: https://www.netlify.com
+1. Truy cập: anhduongparking.io.vn
 2. Đăng ký tài khoản (miễn phí)
 3. Kéo thả folder website vào Netlify
 4. Vào **Domain settings** → **Add custom domain**
@@ -299,4 +299,5 @@ Nếu gặp vấn đề, liên hệ:
 ---
 
 **Chúc bạn deploy thành công! 🎉**
+
 

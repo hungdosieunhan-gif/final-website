@@ -50,3 +50,7 @@ build/
 # Old/unused files (optional - uncomment if needed)
 # indx.html
 
+# Submodule directory (causing Netlify build error)
+anh-duong/
+.gitmodules
+

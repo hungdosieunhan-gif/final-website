@@ -1,0 +1,9 @@
+# Netlify Configuration File
+# Alternative filename (some Netlify versions use this)
+
+[build]
+  publish = "."
+
+[build.environment]
+  NETLIFY_SUBMODULE_DISABLED = "true"
+
